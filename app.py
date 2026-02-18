@@ -50,6 +50,20 @@ st.markdown("""
         margin-top: 10px;
         text-align: center;
     }
+        /* This targets the footer and the bottom padding area */
+    footer {
+        background-color: #000000;
+        color: white;
+    }
+
+    /* If you created a custom div for your footer links */
+    .custom-footer {
+        background-color: #000000;
+        color: white;
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+        margin-top: 50px;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -81,6 +95,7 @@ def get_wa_link(service_name):
 
 col_a, col_b, col_c = st.columns(3)
 
+st.success("📍 Based in Your Town | 🚀 Websites delivered within 48-72 hours")
 # --- FOOTER SECTION ---
 st.divider()
 col_f1, col_f2, col_f3 = st.columns(3)
@@ -135,13 +150,10 @@ with col_b:
 with col_c:
     st.markdown(f"""
     <div class="service-card" style="border-left-color: #6c757d;">
-        <h3>🏨 Hostel Management</h3>
-        <p>The Full Tenix Suite. Automated rent, tenant portals, and digital registers.</p>
+        <h3>📊 Business Dashboard</h3>
+        <p>For Distributors, wedding halls & Schools. Track sales, inventory, or student records in a private secure portal.</p>
         <p><b>Custom Pricing</b></p>
-        <a href="{get_wa_link('Hostel Management')}" target="_blank" class="wa-button">Consult Us</a>
+        <a href="{get_wa_link('Custom Dashboard')}" target="_blank" class="wa-button">Consult Us</a>
     </div>
     """, unsafe_allow_html=True)
 
-# 5. Footer Info
-st.divider()
-st.info("📍 Based in Your Town | 🚀 Websites delivered within 48-72 hours")
