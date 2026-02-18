@@ -109,7 +109,7 @@ with col2:
 st.divider()
 
 theme=Image.open("theme.png")
-st.image(theme, width= 250)
+st.image(theme)
 
 # 4. Service Menu (The Clickable Part)
 st.write("### Choose Your Digital Transformation")
