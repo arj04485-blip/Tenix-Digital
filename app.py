@@ -12,6 +12,17 @@ st.set_page_config(
 # 2. Custom CSS for "Attractive" Design
 st.markdown("""
     <style>
+    /* This targets the main st.title */
+    .stApp h1 {
+        color: #007BFF; /* You can change this to #003366 for a darker blue */
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+
+    /* This targets the subheaders (optional) */
+    .stApp h3 {
+        color: #003366;
+    }
     /* Hide Main Streamlit UI for Professionalism */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
