@@ -71,19 +71,25 @@ st.markdown("""
         text-align: center;
     }
         /* This targets the footer and the bottom padding area */
-    footer {
+    .black-footer {
         background-color: #000000;
-        color: white;
-    }.black-footer {
-        background-color: #000000;
-        color: white;
         padding: 40px 20px;
-        border-radius: 20px 20px 0 0; /* Rounds the top corners */
+        border-radius: 20px 20px 0 0;
         margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers horizontally */
+        justify-content: center; /* Centers vertically */
+        text-align: center;
     }
-    /* This makes sure the text inside the footer stays white */
-    .black-footer p, .black-footer h3 {
-        color: white !important;
+
+    /* Style the buttons inside the footer to look clean */
+    .footer-btn-container {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
     }
       @media (max-width: 768px) {
         .service-card {
@@ -125,37 +131,53 @@ def get_wa_link(service_name):
 col_a, col_b, col_c = st.columns(3)
 
 st.success("📍 Based in Your Town | 🚀 Websites delivered within 48-72 hours")
-# --- FOOTER SECTION ---
-st.markdown('<div class="black-footer">', unsafe_allow_html=True)
-col_f1, col_f2, col_f3 = st.columns(3)
 
-with col_f1:
-    if st.button("Terms of Service"):
-        @st.dialog("Terms of Service")
-        def tos():
-            st.write("""
+# --- FOOTER SECTION ---
+# We use a container to wrap the custom HTML and Streamlit buttons together
+footer_container = st.container()
+
+with footer_container:
+    # 1. Start the Black Box
+    st.markdown('<div class="black-footer">', unsafe_allow_html=True)
+    
+    # 2. Centered Buttons
+    # We use columns inside the container for the buttons
+    col_f1, col_f2 = st.columns([1, 1]) 
+    
+    with col_f1:
+        if st.button("Terms of Service", key="tos_footer"):
+            @st.dialog("Terms of Service")
+            def tos():
+                st.write("""
             **1. Services:** Tenix Digital provides web development services as described in the selected package.
             **2. Payments:** A 50% advance is required to start. Final files/access are handed over upon 100% payment.
             **3. Hosting:** We provide free hosting on community tiers. For custom domains or high-traffic needs, the client must pay third-party hosting costs.
             **4. Liability:** Tenix Digital is not responsible for business losses or data loss on the client's end.
             """)
-        tos()
+            tos()
 
-with col_f2:
-    if st.button("Privacy Policy"):
-        @st.dialog("Privacy Policy")
-        def privacy():
-            st.write("""
+    with col_f2:
+        if st.button("Privacy Policy", key="priv_footer"):
+            @st.dialog("Privacy Policy")
+            def privacy():
+                st.write("""
             **1. Data Collection:** We only collect your name and business details when you contact us via WhatsApp or Form.
             **2. Usage:** Your data is only used to build your website and contact you. We never sell your data.
             **3. DPDP Compliance:** In accordance with Indian laws, you can request us to delete your data at any time.
             **4. Cookies:** We use basic cookies to make this Streamlit app run faster.
             """)
-        privacy()
+            privacy()
 
-with col_f3:
-    st.write("© 2026 Tenix Parent Company")
-    st.markdown("<p style='text-align: right; margin-top: 10px;'>© 2026 Tenix Parent Company</p>", unsafe_allow_html=True)
+    # 3. Centered © Text
+    st.markdown("""
+        <div style="margin-top: 20px;">
+            <p style="color: white; font-size: 14px; margin: 0;">
+                © 2026 Tenix Parent Company
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # 4. Close the Black Box
     st.markdown('</div>', unsafe_allow_html=True)
 with col_a:
     st.markdown(f"""
