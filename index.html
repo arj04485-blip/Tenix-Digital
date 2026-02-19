@@ -139,7 +139,67 @@
             right: 20px; top: 15px;
             font-size: 30px; cursor: pointer; color: #999;
         }
+        /* Hosting highlight card */
+.highlight-card {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  border-radius: 20px;
+  color: #e5e7eb;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
 
+/* Heading */
+.highlight-card h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+.highlight-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+  margin-bottom: 18px;
+}
+
+/* Emphasis line */
+.bold-line {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* CTA button */
+.btn-primary {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 34px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #020617;
+  background: linear-gradient(90deg, #38bdf8, #22d3ee);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.5);
+}
+
+/* Fine print */
+.highlight-card small {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+        }
         @media (max-width: 768px) {
             h1 { font-size: 2.2rem; }
             .grid { grid-template-columns: 1fr; }
