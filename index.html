@@ -273,19 +273,14 @@
 </div>
 
 <!-- Main content -->
-<div class="main">
-  <button class="openbtn" onclick="openSidebar()">☰ Menu</button>
-  <h1>Welcome to Tenix Digital</h1>
-</div>   
 <header>
+    <div class="main">
+  <button class="openbtn" onclick="openSidebar()">☰ Menu</button>
+    </div>
     <img src="logo.png" alt="Tenix Logo" class="logo">
     <h1>Tenix Digital</h1>
     <p class="tagline">Modern Tech for Local Growth.</p>
-</header>
-<div class="hero-container">
-    <img src="theme.png" alt="Agency Banner" class="hero-img">
-</div>
-<script>
+    <script>
 function openSidebar() {
   document.getElementById("mySidebar").style.width = "250px";
   document.querySelector(".main").style.marginLeft = "250px";
@@ -294,7 +289,12 @@ function closeSidebar() {
   document.getElementById("mySidebar").style.width = "0";
   document.querySelector(".main").style.marginLeft= "0";
 }
-</script>
+    </script>
+</header>
+<div class="hero-container">
+    <img src="theme.png" alt="Agency Banner" class="hero-img">
+</div>
+
 <div class="section-header">
     <h2>Our Digital Services</h2>
 </div>
