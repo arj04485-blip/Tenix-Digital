@@ -6,6 +6,7 @@
     <title>Tenix Digital | Smart Business Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
+        
         :root {
             --primary: #007BFF;
             --secondary: #003366;
@@ -22,6 +23,36 @@
             color: var(--dark);
             line-height: 1.6;
         }
+        /* Sidebar */
+.sidebar {
+  width:250px;
+  background:#4CAF50;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  padding-top:30px;
+  position:fixed;
+  height:100%;
+}
+.sidebar h2 { text-align:center; margin-bottom:30px; }
+.sidebar a {
+  color:white;
+  padding:15px 25px;
+  text-decoration:none;
+  display:block;
+  transition:0.3s;
+}
+.sidebar a:hover { background:#45A049; }
+
+/* Main content */
+.main { margin-left:250px; padding:30px; flex:1; }
+
+/* Responsive */
+@media(max-width:768px){
+  body { flex-direction:column; }
+  .sidebar { width:100%; height:auto; position:relative; }
+  .main { margin-left:0; padding:20px; }
+}
 
         /* --- HEADER & HERO --- */
         header {
@@ -207,7 +238,14 @@
     </style>
 </head>
 <body>
-
+<div class="sidebar">
+  <h2>Tenix Digital</h2>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+</div>
+    
 <header>
     <img src="logo.png" alt="Tenix Logo" class="logo">
     <h1>Tenix Digital</h1>
