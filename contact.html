@@ -4,50 +4,100 @@
     <meta charset="UTF-8">
     <title>Contact | Tenix Digital</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            opacity: 0.85;
+        }
+
+        .contact {
+            max-width: 900px;
+            margin: -40px auto 80px;
+            padding: 0 20px;
+            display: grid;
+            gap: 25px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .box h2 {
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .box a {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #22c55e;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+        }
+    </style>
 </head>
 <body>
 
-<header class="page-header">
-    <h1>Contact Us</h1>
-    <p>Quick response. No unnecessary formalities.</p>
+<header>
+    <h1>Let’s Talk</h1>
+    <p>No forms. No waiting. Direct conversation.</p>
 </header>
 
-<main class="content">
-    <section class="contact-box">
+<section class="contact">
+    <div class="box">
+        <h2>📞 WhatsApp</h2>
+        <p>Fastest way to reach us</p>
+        <a class="cta-btn" href="https://wa.me/919301868258">Chat on WhatsApp</a>
+    </div>
 
-        <div class="contact-item">
-            <h3>📞 WhatsApp</h3>
-            <p>
-                <a href="https://wa.me/919301868258" target="_blank">
-                    Chat on WhatsApp
-                </a>
-            </p>
-        </div>
+    <div class="box">
+        <h2>📧 Email</h2>
+        <p>For detailed discussions</p>
+        <a href="mailto:yourmail@gmail.com">arj04485@gmail.com</a>
+    </div>
 
-        <div class="contact-item">
-            <h3>📧 Email</h3>
-            <p>
-                <a href="mailto: arj04485@gmail.com">
-                    yourmail@gmail.com
-                </a>
-            </p>
-        </div>
-
-        <div class="contact-item">
-            <h3>📍 Location</h3>
-            <p>Madhya Pradesh, India</p>
-        </div>
-
-        <div class="contact-cta">
-            <p>Have a project in mind?</p>
-            <a class="cta-btn" href="https://wa.me/919301868258" target="_blank">
-                Talk on WhatsApp
-            </a>
-        </div>
-
-    </section>
-</main>
+    <div class="box">
+        <h2>📍 Location</h2>
+        <p>Madhya Pradesh, India</p>
+    </div>
+</section>
 
 </body>
 </html>
