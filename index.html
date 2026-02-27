@@ -194,6 +194,37 @@
             right: 20px; top: 15px;
             font-size: 30px; cursor: pointer; color: #999;
         }
+        .menu-group{
+    margin: 5px 0;
+}
+
+.menu-toggle{
+    width:100%;
+    background:none;
+    border:none;
+    color:white;
+    padding:10px 0;
+    text-align:left;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.submenu{
+    display:none;
+    padding-left:15px;
+}
+
+.submenu a{
+    display:block;
+    padding:8px 0;
+    font-size:14px;
+    color:#d1d5db;
+}
+
+#pricingArrow{
+    float:right;
+    transition:transform 0.3s ease;
+}
         /* Hosting highlight card */
 .highlight-card {
   max-width: 900px;
@@ -266,12 +297,41 @@
 <!-- Sidebar -->
 <div id="mySidebar" class="sidebar">
   <span class="closebtn" onclick="closeSidebar()">×</span>
+
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
+
+  <!-- Pricing Expander -->
+  <div class="menu-group">
+    <button class="menu-toggle" onclick="togglePricing()">
+      Pricing
+      <span id="pricingArrow">▾</span>
+    </button>
+
+    <div id="pricingMenu" class="submenu">
+      <a href="hostel_pricing.html">Hostel Pricing</a>
+      <a href="coaching_pricing.html">Coaching Pricing</a>
+      <a href="school_pricing.html">School Pricing</a>
+      <a href="custom_pricing.html">Custom Plans</a>
+    </div>
+  </div>
+
   <a href="contact.html">Contact</a>
 </div>
+    <script>
+function togglePricing(){
+    const menu = document.getElementById("pricingMenu");
+    const arrow = document.getElementById("pricingArrow");
 
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+    } else {
+        menu.style.display = "block";
+        arrow.style.transform = "rotate(180deg)";
+    }
+}
+    </script>
 <!-- Main content -->
 <div class="main">
   <button class="openbtn" onclick="openSidebar()">☰</button>
