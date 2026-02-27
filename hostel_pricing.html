@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenix Hostel Management – Pricing</title>
+
+<style>
+    :root{
+        --primary:#1e88e5;
+        --secondary:#111827;
+        --light:#f9fafb;
+        --border:#e5e7eb;
+        --green:#16a34a;
+        --blue:#2563eb;
+        --purple:#7c3aed;
+    }
+
+    body{
+        margin:0;
+        font-family:Arial, Helvetica, sans-serif;
+        background:var(--light);
+        color:#111;
+        line-height:1.6;
+    }
+
+    .container{
+        max-width:1100px;
+        margin:auto;
+        padding:40px 20px;
+    }
+
+    h1,h2,h3{
+        text-align:center;
+        margin-bottom:10px;
+    }
+
+    h1{
+        font-size:36px;
+        color:var(--secondary);
+    }
+
+    .subtitle{
+        text-align:center;
+        color:#555;
+        margin-bottom:40px;
+    }
+
+    .section-title{
+        margin:60px 0 30px;
+        font-size:28px;
+        color:var(--secondary);
+    }
+
+    .pricing-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:25px;
+    }
+
+    .card{
+        background:#fff;
+        border:1px solid var(--border);
+        border-radius:12px;
+        padding:25px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card h3{
+        font-size:22px;
+        margin-bottom:5px;
+    }
+
+    .price{
+        font-size:26px;
+        font-weight:bold;
+        margin:15px 0;
+    }
+
+    .basic{color:var(--green);}
+    .standard{color:var(--blue);}
+    .pro{color:var(--purple);}
+
+    ul{
+        padding-left:18px;
+        margin-top:15px;
+    }
+
+    ul li{
+        margin-bottom:10px;
+    }
+
+    .note{
+        margin-top:40px;
+        padding:20px;
+        background:#eef2ff;
+        border-left:5px solid var(--primary);
+        border-radius:6px;
+    }
+
+    .renewal-table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:30px;
+    }
+
+    .renewal-table th,
+    .renewal-table td{
+        border:1px solid var(--border);
+        padding:15px;
+        text-align:center;
+    }
+
+    .renewal-table th{
+        background:#f3f4f6;
+    }
+
+    .footer-note{
+        text-align:center;
+        margin-top:40px;
+        color:#444;
+        font-size:15px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Tenix Hostel Management</h1>
+    <p class="subtitle">Complete Digital System for Hostels & PGs</p>
+
+    <!-- SETUP SECTION -->
+    <h2 class="section-title">🔧 One-Time Setup (Plan Selection)</h2>
+
+    <div class="pricing-grid">
+
+        <div class="card">
+            <h3 class="basic">🟢 Basic Setup</h3>
+            <div class="price">₹7,999</div>
+            <ul>
+                <li>Hosting & domain configuration</li>
+                <li>Hostel website setup</li>
+                <li>Basic hostel management system</li>
+                <li>Admin account creation</li>
+                <li>Basic training & handover</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="standard">🔵 Standard Setup</h3>
+            <div class="price">₹11,999</div>
+            <ul>
+                <li>Everything in Basic Setup</li>
+                <li>Fee tracking system configuration</li>
+                <li>Reports setup</li>
+                <li>WhatsApp fee reminder configuration</li>
+                <li>Data backup structure setup</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="pro">🟣 Pro Setup</h3>
+            <div class="price">₹15,999</div>
+            <ul>
+                <li>Everything in Standard Setup</li>
+                <li>Online fee payment gateway setup</li>
+                <li>Automation configuration</li>
+                <li>Priority setup & testing</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- YEARLY SECTION -->
+    <h2 class="section-title">🔁 Yearly Renewal (Continuation Only)</h2>
+
+    <table class="renewal-table">
+        <tr>
+            <th>Plan</th>
+            <th>Yearly Charge</th>
+            <th>Covers</th>
+        </tr>
+        <tr>
+            <td>Basic</td>
+            <td>₹5,999 / year</td>
+            <td>Hosting, maintenance, limited support</td>
+        </tr>
+        <tr>
+            <td>Standard</td>
+            <td>₹8,999 / year</td>
+            <td>Hosting, maintenance, support</td>
+        </tr>
+        <tr>
+            <td>Pro</td>
+            <td>₹12,999 / year</td>
+            <td>Hosting, maintenance, priority support</td>
+        </tr>
+    </table>
+
+    <div class="note">
+        <strong>Important:</strong><br>
+        • Plan is fixed at setup<br>
+        • Yearly renewal is mandatory to keep services active<br>
+        • Upgrade anytime by paying setup difference<br>
+        • Major new features are charged separately
+    </div>
+
+    <p class="footer-note">
+        “Setup ek baar hota hai, maintenance har saal.”
+    </p>
+
+</div>
+
+</body>
+  </html>
